@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/other.css">
     <link rel="manifest" href="/manifest.json">
-
 
     <link rel="apple-touch-icon" type="image/jpg" sizes="512x512" href="images/logoswish.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,28 +29,28 @@
         </div>
         <div class="bottomContent1">
             <div class="buttons999">
-                <a class="btn999" href="form.html">Swisha</a>
+                <a class="btn999" href="send.html">Swisha</a>
                 <a class="btn999" style="background-color: #122228; color: #17a4df;">Skanna</a>
             </div>
-            <img class="iconsTemp" src="images/bottom.png" alt="">
             <div class="iconContent">
-                <div class="icon">
-                    <img src="" alt="">
-                    <p>Hem</p>
-                </div>
-                <div class="icon">
-                    <img src="" alt="">
-                    <p>Förfrågningar</p>
-                </div>
-                <div class="icon">
-                    <p>Historik</p>
-                </div>
-                <div class="icon">
-                    <p>Profil</p>
-                </div>
+                <a href="startup.html" class="icon active">
+                    <img src="images/home.png" alt="">
+                    <p>Home</p>
+                </a>
+                <a href="#" class="icon">
+                    <img src="images/request.png" alt="">
+                    <p>Requests</p>
+                </a>
+                <a href="#" class="icon">
+                    <img src="images/history.png" alt="">
+                    <p>History</p>
+                </a>
+                <a href="profile.html" class="icon">
+                    <img src="images/profile.png" alt="">
+                    <p>Profile</p>
+                </a>
             </div>
         </div>
-
     </div> 
     <script src="js/index.js"></script>
     <script src="js/k1000.js"></script>
@@ -60,11 +58,8 @@
         window.addEventListener('load', function() {
             function handleScroll() {
                 if (window.innerHeight >= 677) {
-                    // Disable scrolling
-                    
                     document.addEventListener('touchmove', preventDefaultScroll, { passive: false });
                 } else {
-                    // Enable scrolling
                     document.removeEventListener('touchmove', preventDefaultScroll, { passive: false });
                 }
             }
@@ -72,7 +67,7 @@
                 event.preventDefault();
             }
             handleScroll(); 
-            window.addEventListener('resize', handleScroll); // Add event listener for window resize
+            window.addEventListener('resize', handleScroll);
         });
     </script>
 </body>
