@@ -1,6 +1,4 @@
-
-
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -9,11 +7,11 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-html, body, #root{
-    font-family: montserrat;
+html, body, #root {
+    font-family: 'Montserrat', sans-serif;
 }
 
-.content{
+.content {
     position: relative;
     display: flex;
     justify-content: center;
@@ -26,7 +24,7 @@ html, body, #root{
     min-height: 667px;
 }
 
-.mainContent{
+.mainContent {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -34,24 +32,24 @@ html, body, #root{
     top: 0px;
     height: 53%;
     width: 110%;
-    background: linear-gradient(to left, #438c1d, #7ba60f);
-    border-radius: 0 0 50% 50% / 0 0 40px 40px; /* Adjust values as needed */
+    background: linear-gradient(to right, #0f7bce, #17a4df);
+    border-radius: 0 0 50% 50% / 0 0 40px 40px;
 }
 
-.confirmedContent{
+.confirmedContent {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-#confirmedText{
+#confirmedText {
     color: white;
     font-weight: 500;
     font-size: 23px;
 }
 
-.confirmedContent img{
+.confirmedContent img {
     height: 120px;
     border-radius: 50%;
     animation: enlargeAndShrink 1s alternate; 
@@ -60,26 +58,24 @@ html, body, #root{
 
 @keyframes enlargeAndShrink {
     0% {
-      transform: scale(1); /* Initial scale */
+      transform: scale(1);
     }
     50% {
-      transform: scale(0.9); /* Enlarged scale */
+      transform: scale(0.9);
     }
     100% {
-      transform: scale(1); /* Return to initial scale */
+      transform: scale(1);
     }
-  }
+}
 
-
-
-.particle{
+.particle {
     position: absolute;
     top: 0;
     height: 95%;
     width: 100%;
 }
 
-#particlesClick{
+#particlesClick {
     position: absolute;
     top: 0;
     height: 95%;
@@ -87,7 +83,7 @@ html, body, #root{
     z-index: 10;
 }
 
-.textContent{
+.textContent {
     position: absolute;
     top: 56%;
     width: 100%;
@@ -98,7 +94,7 @@ html, body, #root{
     color: #a6a7a9;
 }
 
-.ref{
+.ref {
     position: absolute;
     bottom: 160%;
     padding-left: 10px;
@@ -109,37 +105,36 @@ html, body, #root{
     justify-content: space-between;
     width: 90%;
     height: 40px;
-    border-bottom: 1px solid #272727 ;
-    border-top: 1px solid #272727 ;
-
+    border-bottom: 1px solid #272727;
+    border-top: 1px solid #272727;
 }
 
-#receiverDisplay{
+#receiverDisplay {
     margin-top: 17px;
     font-weight: 400;
     color: white;
     font-size: 23px;
 }
 
-#numberDisplay{
+#numberDisplay {
     margin-top: 5px;
     font-size: 16px;
 }
 
-#amountDisplay{
+#amountDisplay {
     margin-top: 15px;
     font-weight: 500;
     color: white;
     font-size: 35px;
 }
 
-#messageDisplay{
+#messageDisplay {
     color: white;
     font-weight: 300;
     margin-top: 15px;
 }
 
-.bottomContent{
+.bottomContent {
     position: absolute;
     bottom: 5%;
     height: 50px;
@@ -149,12 +144,12 @@ html, body, #root{
     align-items: center;
 }
 
-.bottomContent img{
+.bottomContent img {
     height: 40px;
     pointer-events: none;
 }
 
-.exitButton{
+.exitButton {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -167,7 +162,7 @@ html, body, #root{
     border-radius: 50%;
 }
 
-.exitButton img{
+.exitButton img {
     height: 17px;
     pointer-events: none;
 }
