@@ -1,4 +1,6 @@
-* {
+
+
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -7,11 +9,11 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-html, body, #root {
+html, body, #root{
     font-family: montserrat;
 }
 
-.content {
+.content{
     position: relative;
     display: flex;
     justify-content: center;
@@ -19,12 +21,12 @@ html, body, #root {
     flex-direction: column;
     height: 100vh;
     width: 100%;
-    background-color: #0e0f11;
+    background-color: #18191b;
     overflow: hidden;
     min-height: 667px;
 }
 
-.mainContent {
+.mainContent{
     position: absolute;
     display: flex;
     justify-content: center;
@@ -33,49 +35,51 @@ html, body, #root {
     height: 53%;
     width: 110%;
     background: linear-gradient(to left, #438c1d, #7ba60f);
-    border-radius: 0 0 50% 50% / 0 0 40px 40px;
+    border-radius: 0 0 50% 50% / 0 0 40px 40px; /* Adjust values as needed */
 }
 
-.confirmedContent {
+.confirmedContent{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-#confirmedText {
+#confirmedText{
     color: white;
     font-weight: 500;
     font-size: 23px;
 }
 
-.confirmedContent img {
+.confirmedContent img{
     height: 120px;
     border-radius: 50%;
-    animation: enlargeAndShrink 1s alternate;
+    animation: enlargeAndShrink 1s alternate; 
     pointer-events: none;
 }
 
 @keyframes enlargeAndShrink {
     0% {
-      transform: scale(1);
+      transform: scale(1); /* Initial scale */
     }
     50% {
-      transform: scale(0.9);
+      transform: scale(0.9); /* Enlarged scale */
     }
     100% {
-      transform: scale(1);
+      transform: scale(1); /* Return to initial scale */
     }
-}
+  }
 
-.particle {
+
+
+.particle{
     position: absolute;
     top: 0;
     height: 95%;
     width: 100%;
 }
 
-#particlesClick {
+#particlesClick{
     position: absolute;
     top: 0;
     height: 95%;
@@ -83,7 +87,7 @@ html, body, #root {
     z-index: 10;
 }
 
-.textContent {
+.textContent{
     position: absolute;
     top: 56%;
     width: 100%;
@@ -94,7 +98,7 @@ html, body, #root {
     color: #a6a7a9;
 }
 
-.ref {
+.ref{
     position: absolute;
     bottom: 160%;
     padding-left: 10px;
@@ -105,36 +109,37 @@ html, body, #root {
     justify-content: space-between;
     width: 90%;
     height: 40px;
-    border-bottom: 1px solid #272727;
-    border-top: 1px solid #272727;
+    border-bottom: 1px solid #272727 ;
+    border-top: 1px solid #272727 ;
+
 }
 
-#receiverDisplay {
+#receiverDisplay{
     margin-top: 17px;
     font-weight: 400;
     color: white;
     font-size: 23px;
 }
 
-#numberDisplay {
+#numberDisplay{
     margin-top: 5px;
     font-size: 16px;
 }
 
-#amountDisplay {
+#amountDisplay{
     margin-top: 15px;
     font-weight: 500;
     color: white;
     font-size: 35px;
 }
 
-#messageDisplay {
+#messageDisplay{
     color: white;
     font-weight: 300;
     margin-top: 15px;
 }
 
-.bottomContent {
+.bottomContent{
     position: absolute;
     bottom: 5%;
     height: 50px;
@@ -144,12 +149,12 @@ html, body, #root {
     align-items: center;
 }
 
-.bottomContent img {
+.bottomContent img{
     height: 40px;
     pointer-events: none;
 }
 
-.exitButton {
+.exitButton{
     position: absolute;
     display: flex;
     justify-content: center;
@@ -162,140 +167,7 @@ html, body, #root {
     border-radius: 50%;
 }
 
-.exitButton img {
+.exitButton img{
     height: 17px;
     pointer-events: none;
-}
-
-/* Tabs section */
-.tabs {
-    position: absolute;
-    top: 110px;
-    display: flex;
-    width: 100%;
-    border-bottom: 1px solid #272727;
-}
-
-.tab {
-    flex: 1;
-    text-align: center;
-    padding: 15px 0;
-    color: #96989b;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.tab.active {
-    color: white;
-    border-bottom: 2px solid #17a4df;
-}
-
-/* Form field sections */
-.recipient-section, .amount-section, .message-section {
-    margin-top: 20px;
-}
-
-label {
-    display: block;
-    color: #96989b;
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.recipient-input-container {
-    position: relative;
-}
-
-.recipient-buttons {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    margin-top: 15px;
-}
-
-.icon-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: transparent;
-    color: #17a4df;
-    gap: 5px;
-}
-
-.circle-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.blue-bg {
-    background-color: #142834;
-}
-
-.green-bg {
-    background-color: #193325;
-}
-
-.circle-icon img {
-    width: 20px;
-    height: 20px;
-}
-
-.icon-button span {
-    color: #17a4df;
-    font-size: 14px;
-}
-
-/* Card section */
-.card-section {
-    margin-top: 20px;
-}
-
-.include-card {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: transparent;
-    color: #17a4df;
-    font-size: 16px;
-}
-
-.include-card img {
-    width: 20px;
-    height: 20px;
-}
-
-/* Footer navigation */
-.nav-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    background-color: #18191b;
-    border-top: 1px solid #272727;
-    padding: 10px 0;
-}
-
-.nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #a6a7a9;
-}
-
-.nav-item.active {
-    color: #17a4df;
-}
-
-.nav-icon {
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-
-.nav-label {
-    font-size: 12px;
 }
