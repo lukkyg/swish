@@ -1,6 +1,6 @@
 /*startup*/
 
-.headContent{
+.headContent {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -10,19 +10,19 @@
     pointer-events: none;
 }
 
-.logoContent{
+.logoContent {
     margin-bottom: 60px;
     display: flex;
     justify-content: center;
     pointer-events: none;
 }
 
-.logoContent img{
+.logoContent img {
     width: 120px;
     pointer-events: none;
 }
 
-.choose{
+.choose {
     width: 100%;
     height: 50px;
     display: flex;
@@ -30,7 +30,7 @@
     flex-direction: row;
 }
 
-.choose button{
+.choose button {
     margin-top: 20px;
     font-size: 13px;
     font-weight: 600;
@@ -38,12 +38,12 @@
     width: 90px;
     height: 25px;
     border-radius: 20px;
-    border: 2px solid  #17a4df;
+    border: 2px solid #17a4df;
     background-color: transparent;
     color: #17a4df;
 }
 
-.bottomContent1{
+.bottomContent1 {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -51,14 +51,14 @@
     width: 100%;
 }
 
-.buttons999{
+.buttons999 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
 }
 
-.btn999{
+.btn999 {
     font-weight: 500;
     font-size: 20px;
     display: flex;
@@ -72,50 +72,50 @@
     margin-bottom: 10px;
 }
 
-.iconsTemp{
+.iconsTemp {
     pointer-events: none;
     margin: auto;
     width: 80%;
     margin-bottom: 30px;
 }
 
-.iconContent{
+.iconContent {
     width: 100%;
-    height: 0px;
+    height: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    background-color: #18191b;
+    border-top: 1px solid #272727;
 }
 
-
-.iconContent p{
-    display: none;
+.iconContent p {
     margin-top: 5px;
-    color: white;
+    color: #a6a7a9;
     font-weight: 500;
     font-size: 13px;
 }
 
-.icon{
+.icon {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding-top: 10px;
 }
-
-
 
 /*Form*/
 
-.curve{
+.curve {
     position: absolute;
     top: 0;
     background-color: #0d0e0f;
     width: 110%;
     height: 15%;
-    border-radius: 0 0 50% 50% / 0 0 40px 40px; /* Adjust values as needed */
-
+    border-radius: 0 0 50% 50% / 0 0 40px 40px;
 }
-.headContent1{
+
+.headContent1 {
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -126,7 +126,7 @@
     height: 50px;
 }
 
-.formContent{
+.formContent {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -135,12 +135,11 @@
     width: 100%;
 }
 
-.formInside{
+.formInside {
     width: 90%;
 }
 
-
-.formInside input{
+.formInside input {
     background-color: transparent;
     font-family: montserrat;
     font-weight: 400;
@@ -149,14 +148,14 @@
     width: 100%;
     height: 50px;
     outline: none;
-    border-bottom: 1px solid #272727 ;
+    border-bottom: 1px solid #272727;
 }
 
 input:focus {
-    caret-color: #17a4df; /* Change this to your desired color */
-  }
+    caret-color: #17a4df;
+}
 
-.swisha{
+.swisha {
     font-family: montserrat;
     font-weight: 500;
     font-size: 20px;
