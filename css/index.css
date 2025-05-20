@@ -1,3 +1,5 @@
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -33,7 +35,7 @@ html, body, #root{
     height: 53%;
     width: 110%;
     background: linear-gradient(to left, #438c1d, #7ba60f);
-    border-radius: 0 0 50% 50% / 0 0 40px 40px;
+    border-radius: 0 0 50% 50% / 0 0 40px 40px; /* Adjust values as needed */
 }
 
 .confirmedContent{
@@ -58,15 +60,17 @@ html, body, #root{
 
 @keyframes enlargeAndShrink {
     0% {
-      transform: scale(1);
+      transform: scale(1); /* Initial scale */
     }
     50% {
-      transform: scale(0.9);
+      transform: scale(0.9); /* Enlarged scale */
     }
     100% {
-      transform: scale(1);
+      transform: scale(1); /* Return to initial scale */
     }
-}
+  }
+
+
 
 .particle{
     position: absolute;
@@ -105,8 +109,9 @@ html, body, #root{
     justify-content: space-between;
     width: 90%;
     height: 40px;
-    border-bottom: 1px solid #272727;
-    border-top: 1px solid #272727;
+    border-bottom: 1px solid #272727 ;
+    border-top: 1px solid #272727 ;
+
 }
 
 #receiverDisplay{
@@ -165,203 +170,4 @@ html, body, #root{
 .exitButton img{
     height: 17px;
     pointer-events: none;
-}
-
-.sendOptions {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 10px;
-    padding: 0 15px;
-}
-
-.recipientOption {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 33%;
-}
-
-.recipientOption img {
-    width: 60px;
-    height: 60px;
-    background-color: #e1f2fc;
-    border-radius: 50%;
-    padding: 15px;
-    margin-bottom: 8px;
-}
-
-.recipientOption p {
-    color: #17a4df;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.tabBar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #18191b;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: 1px solid #272727;
-    z-index: 100;
-}
-
-.tabItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 25%;
-}
-
-.tabItem img {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 4px;
-}
-
-.tabItem p {
-    color: #a6a7a9;
-    font-size: 12px;
-}
-
-.tabItem.active p {
-    color: #17a4df;
-}
-
-.profileContent {
-    position: absolute;
-    top: 100px;
-    width: 90%;
-}
-
-.profileOption {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 10px;
-    border-bottom: 1px solid #272727;
-}
-
-.profileOption p {
-    color: white;
-    font-size: 16px;
-}
-
-.profileOption img {
-    height: 16px;
-}
-
-.languageOptions, .appearanceOptions {
-    display: none;
-    padding-left: 20px;
-}
-
-.languageOption, .appearanceOption {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 10px;
-    border-bottom: 1px solid #272727;
-}
-
-.languageOption p, .appearanceOption p {
-    color: #a6a7a9;
-    font-size: 14px;
-}
-
-.radioButton {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid #17a4df;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.innerRadio {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: transparent;
-}
-
-.innerRadio.selected {
-    background-color: #17a4df;
-}
-
-.sendHeader {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 20px;
-    margin-top: 40px;
-}
-
-.sendHeader .tabs {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-}
-
-.sendHeader .tab {
-    padding: 10px 20px;
-    color: #a6a7a9;
-    font-size: 16px;
-    font-weight: 500;
-    border-bottom: 2px solid transparent;
-}
-
-.sendHeader .tab.active {
-    color: #17a4df;
-    border-bottom: 2px solid #17a4df;
-}
-
-.sendForm {
-    margin-top: 20px;
-    width: 90%;
-}
-
-.formField {
-    margin-bottom: 20px;
-    border: 1px solid #272727;
-    border-radius: 10px;
-    padding: 15px;
-    background-color: #1e1f21;
-}
-
-.formField label {
-    display: block;
-    color: #a6a7a9;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.formField input {
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 16px;
-    outline: none;
-}
-
-.sendButton {
-    width: 100%;
-    padding: 15px 0;
-    background-color: #17a4df;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.icon.active p {
-    color: #17a4df;
 }

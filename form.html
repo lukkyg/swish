@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,35 +15,88 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <title>Index</title>
+    <title>Swish - Send Money</title>
 </head>
 <body style="-webkit-user-select: none;">
     <div class="content">
         <div class="curve"></div>
         <div class="headContent1">
             <a href="startup.html"><img style="height: 15px; padding-left: 20px;" src="images/close.png" alt=""></a>
-            <p style="color: white; font-weight: 500;">Swisha</p>
-            <p style="font-size: 25px; color: white; padding-right: 20px;">?</p>
+            <p style="color: white; font-weight: 500;">Swish</p>
+            <a href="#" onclick="showHelp(event)"><p style="font-size: 25px; color: white; padding-right: 20px;">?</p></a>
         </div>
+        
+        <div class="tabs">
+            <div class="tab active" id="swish-tab" onclick="changeTab('swish')">Swish</div>
+            <div class="tab" id="request-tab" onclick="changeTab('request')">Request</div>
+        </div>
+        
         <div class="formContent">
             <div class="formInside">
-                <div class="choose">
-                    <button style="background-color: #17a4df; color: white;" id="vanlig" onclick="vanlig()">Vanlig</button>
-                    <button id="foretag" onclick="foretag()">Företag</button>
+                <div class="recipient-section">
+                    <label for="receiver-Data">Recipient</label>
+                    <div class="recipient-input-container">
+                        <input id="receiver-Data" type="text" placeholder="Recipient">
+                        <div class="recipient-buttons">
+                            <button class="icon-button contacts-btn" onclick="showContacts()">
+                                <div class="circle-icon blue-bg"><img src="images/user.png" alt="Contacts"></div>
+                                <span>Contacts</span>
+                            </button>
+                            <button class="icon-button favorites-btn" onclick="showFavorites()">
+                                <div class="circle-icon blue-bg"><img src="images/heart.png" alt="Favorites"></div>
+                                <span>Favorites</span>
+                            </button>
+                            <button class="icon-button scan-btn" onclick="scanQR()">
+                                <div class="circle-icon green-bg"><img src="images/qr-code.png" alt="Scan QR"></div>
+                                <span>Scan QR</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <input id="receiver-Data" style="margin-top: 10%;" type="text" placeholder="Mottagare">
-                <input id="receiverF-Data" style="margin-top: 10%; display: none;" type="text" placeholder="Företag Namn">
 
-                <input onclick="numberActive()" id="number-Data" style="margin-top: 10%;" type="tel" placeholder="Telefonnummer" maxlength="16">
-                <input id="amount-Data" style="margin-top: 10%;" type="tel" placeholder="Belopp">
+                <div class="amount-section">
+                    <label for="amount-Data">Amount</label>
+                    <input id="amount-Data" type="tel" placeholder="Amount">
+                </div>
 
-                <input id="message-Data" style="margin-top: 10%;" type="text" placeholder="Meddelande">
+                <div class="message-section">
+                    <label for="message-Data">Message</label>
+                    <input id="message-Data" type="text" placeholder="Message">
+                </div>
                 
+                <div class="card-section">
+                    <button class="include-card" onclick="showCardSelector()">
+                        <img src="images/card.png" alt="Card">
+                        Include a card
+                    </button>
+                </div>
             </div>
         </div>
-        <a class="swisha" id="swishaB" onclick="saveData()" href="index.html">Swisha</a>
-
-    </div> 
+        
+        <div class="card-selector" id="card-selector" style="display: none;">
+            <div class="card-selector-header">
+                <button class="close-btn" onclick="hideCardSelector()">✕</button>
+                <h2>Choose a card</h2>
+            </div>
+            <div class="card-grid">
+                <div class="card" onclick="selectCard('card1')">
+                    <div class="card-preview bee-card">
+                        <h3>PLEASURE DOING</h3>
+                        <div class="bees">
+                            <div class="bee"></div>
+                            <div class="bee"></div>
+                        </div>
+                        <h2>BZZNESS</h2>
+                    </div>
+                    <p>Greeting Card of the Year</p>
+                </div>
+                <!-- More cards can be added here -->
+            </div>
+        </div>
+        
+        <button class="swisha" id="swishaB" onclick="saveData()">Swish</button>
+    </div>
+    
     <script type="module" src="js/auth.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/index.js"></script>
@@ -53,19 +105,64 @@
         window.addEventListener('load', function() {
             function handleScroll() {
                 if (window.innerHeight >= 677) {
-                    // Disable scrolling
                     document.addEventListener('touchmove', preventDefaultScroll, { passive: false });
                 } else {
-                    // Enable scrolling
                     document.removeEventListener('touchmove', preventDefaultScroll, { passive: false });
                 }
             }
             function preventDefaultScroll(event) {
                 event.preventDefault();
             }
-            handleScroll(); // Call the function initially
-            window.addEventListener('resize', handleScroll); // Add event listener for window resize
+            handleScroll();
+            window.addEventListener('resize', handleScroll);
         });
+        
+        function changeTab(tab) {
+            document.getElementById('swish-tab').classList.remove('active');
+            document.getElementById('request-tab').classList.remove('active');
+            document.getElementById(tab + '-tab').classList.add('active');
+            
+            // Change form according to the tab
+            if (tab === 'request') {
+                document.querySelector('.swisha').textContent = 'Request';
+            } else {
+                document.querySelector('.swisha').textContent = 'Swish';
+            }
+        }
+        
+        function showContacts() {
+            // Contact functionality would go here
+            alert('Contacts feature not implemented');
+        }
+        
+        function showFavorites() {
+            // Favorites functionality would go here
+            alert('Favorites feature not implemented');
+        }
+        
+        function scanQR() {
+            // QR scanning functionality would go here
+            alert('QR scanning feature not implemented');
+        }
+        
+        function showCardSelector() {
+            document.getElementById('card-selector').style.display = 'block';
+        }
+        
+        function hideCardSelector() {
+            document.getElementById('card-selector').style.display = 'none';
+        }
+        
+        function selectCard(cardId) {
+            // Card selection functionality
+            hideCardSelector();
+            alert('Card selected: ' + cardId);
+        }
+        
+        function showHelp(e) {
+            e.preventDefault();
+            alert('Swish Help: Send money instantly to other Swish users.');
+        }
     </script>
 </body>
 </html>
