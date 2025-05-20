@@ -81,17 +81,17 @@
 
 .iconContent{
     width: 100%;
-    height: 0px;
+    height: 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    background-color: #18191b;
+    border-top: 1px solid #272727;
 }
 
-
 .iconContent p{
-    display: none;
     margin-top: 5px;
-    color: white;
+    color: #a6a7a9;
     font-weight: 500;
     font-size: 13px;
 }
@@ -100,9 +100,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 25%;
+    padding-top: 8px;
 }
 
-
+.icon img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 3px;
+}
 
 /*Form*/
 
@@ -112,9 +118,9 @@
     background-color: #0d0e0f;
     width: 110%;
     height: 15%;
-    border-radius: 0 0 50% 50% / 0 0 40px 40px; /* Adjust values as needed */
-
+    border-radius: 0 0 50% 50% / 0 0 40px 40px;
 }
+
 .headContent1{
     position: absolute;
     display: flex;
@@ -139,7 +145,6 @@
     width: 90%;
 }
 
-
 .formInside input{
     background-color: transparent;
     font-family: montserrat;
@@ -149,12 +154,12 @@
     width: 100%;
     height: 50px;
     outline: none;
-    border-bottom: 1px solid #272727 ;
+    border-bottom: 1px solid #272727;
 }
 
 input:focus {
-    caret-color: #17a4df; /* Change this to your desired color */
-  }
+    caret-color: #17a4df;
+}
 
 .swisha{
     font-family: montserrat;
@@ -170,4 +175,80 @@ input:focus {
     width: 90%;
     border-radius: 10px;
     bottom: 50px;
+}
+
+.sendPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+}
+
+.sendTabs {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #272727;
+}
+
+.sendTab {
+    width: 50%;
+    padding: 15px 0;
+    text-align: center;
+    color: #a6a7a9;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sendTab.active {
+    color: #17a4df;
+    border-bottom: 2px solid #17a4df;
+}
+
+.recipientField {
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipientField label {
+    color: #a6a7a9;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.recipientInput {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.recipientOptions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.optionCircle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #e6f7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.optionCircle img {
+    width: 40px;
+    height: 40px;
+}
+
+.optionLabel {
+    text-align: center;
+    color: #17a4df;
+    font-size: 14px;
 }

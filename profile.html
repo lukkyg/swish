@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, viewport-fit=cover, user-scalable=no">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/other.css">
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="apple-touch-icon" type="image/jpg" sizes="512x512" href="images/logoswish.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Profile</title>
+</head>
+<body style="-webkit-user-select: none;">
+    <div class="content">
+        <div class="curve"></div>
+        <div class="headContent1">
+            <a href="startup.html"><img style="height: 15px; padding-left: 20px;" src="images/close.png" alt=""></a>
+            <p style="color: white; font-weight: 500;">Profile</p>
+            <p style="font-size: 25px; color: white; padding-right: 20px;">?</p>
+        </div>
+        <div class="profileContent">
+            <div class="profileOption" onclick="toggleLanguageOptions()">
+                <p>Language</p>
+                <img src="images/arrow-right.png" alt="">
+            </div>
+            <div class="languageOptions">
+                <div class="languageOption" onclick="setLanguage('English')">
+                    <p>English</p>
+                    <div class="radioButton" id="englishRadio">
+                        <div class="innerRadio" id="englishInner"></div>
+                    </div>
+                </div>
+                <div class="languageOption" onclick="setLanguage('Swedish')">
+                    <p>Swedish</p>
+                    <div class="radioButton" id="swedishRadio">
+                        <div class="innerRadio" id="swedishInner"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profileOption" onclick="toggleAppearanceOptions()">
+                <p>Appearance</p>
+                <img src="images/arrow-right.png" alt="">
+            </div>
+            <div class="appearanceOptions">
+                <div class="appearanceOption" onclick="setAppearance('Light')">
+                    <p>Light</p>
+                    <div class="radioButton" id="lightRadio">
+                        <div class="innerRadio" id="lightInner"></div>
+                    </div>
+                </div>
+                <div class="appearanceOption" onclick="setAppearance('Dark')">
+                    <p>Dark</p>
+                    <div class="radioButton" id="darkRadio">
+                        <div class="innerRadio" id="darkInner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottomContent1">
+            <img class="iconsTemp" src="images/bottom.png" alt="">
+            <div class="iconContent">
+                <a href="startup.html" class="icon">
+                    <img src="images/home.png" alt="">
+                    <p>Home</p>
+                </a>
+                <a href="#" class="icon">
+                    <img src="images/request.png" alt="">
+                    <p>Requests</p>
+                </a>
+                <a href="#" class="icon">
+                    <img src="images/history.png" alt="">
+                    <p>History</p>
+                </a>
+                <a href="profile.html" class="icon active">
+                    <img src="images/profile.png" alt="">
+                    <p>Profile</p>
+                </a>
+            </div>
+        </div>
+    </div> 
+    <script type="module" src="js/auth.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/k1000.js"></script>
+    <script src="js/profile.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            function handleScroll() {
+                if (window.innerHeight >= 677) {
+                    document.addEventListener('touchmove', preventDefaultScroll, { passive: false });
+                } else {
+                    document.removeEventListener('touchmove', preventDefaultScroll, { passive: false });
+                }
+            }
+            function preventDefaultScroll(event) {
+                event.preventDefault();
+            }
+            handleScroll();
+            window.addEventListener('resize', handleScroll);
+            
+            loadSettings();
+        });
+    </script>
+</body>
+</html>
